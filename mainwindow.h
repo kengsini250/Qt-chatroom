@@ -18,11 +18,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QString ip_temp;
-    unsigned short port_temp = 0;
-
     MyServer *myServer;
-private slots:
 };
 
 #endif // MAINWINDOW_H

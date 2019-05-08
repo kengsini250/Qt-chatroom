@@ -4,6 +4,7 @@
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
 #include <QMainWindow>
+#include <QString>
 #include <QByteArray>
 
 class MyServer : public QTcpServer
@@ -17,11 +18,10 @@ protected:
     void incomingConnection(qintptr socketDescriptor);
 private:
 	QVector<QTcpSocket*> AllClient;
-    QByteArray msg;
-
+    QString msg;
 signals:
     void newClient();
-
+    void ClientType(const QString& str);
 };
 
 #endif
